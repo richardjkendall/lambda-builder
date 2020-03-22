@@ -6,4 +6,4 @@ cd $HOME/package
 pip3 install --upgrade --target=/output -r requirements.txt
 if [ -x install.sh ]; then ./install.sh; fi
 cp -R $HOME/package/*.py /output/.
-
+cp -R $HOME/package/*.json /output/.
