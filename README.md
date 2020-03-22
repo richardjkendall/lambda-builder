@@ -17,3 +17,7 @@ Package is placed in the /output folder.
 ```
 docker run --rm -e REPO=<git url> -v <local folder where you want the output>:/output richardjkendall/lambda-builder
 ```
+
+## Terraform
+
+You can see the terraform module that this works with here https://github.com/richardjkendall/tf-modules/tree/master/modules/lambda-function
