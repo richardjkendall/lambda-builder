@@ -1,6 +1,6 @@
 FROM amazonlinux:2
 
-RUN yum install -y python3 zip git
+RUN yum install -y python3 zip git python3-devel
 RUN yum groupinstall -y "Development Tools"
 
 COPY run.sh /run.sh
