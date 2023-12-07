@@ -1,8 +1,15 @@
 FROM amazonlinux:2
 
-RUN yum install -y python3 zip git python3-devel
-#RUN yum groupinstall -y "Development Tools"
+# new install for specific Python version
+RUN yum -y groupinstall development
+RUN yum -y install zlib-devel openssl-devel bzip2-devel wget
 
+RUN wget https://www.python.org/ftp/python/3.8.9/Python-3.8.9.tgz
+RUN tar xvzf Python-3.8.9.tgz
+RUN cd Python-3.8.9; ./configure --enable-optimizations; make install
+# python 3.8 installed
+
+# get pip
 ADD https://bootstrap.pypa.io/get-pip.py get-pip.py
 RUN chmod 777 get-pip.py
 
